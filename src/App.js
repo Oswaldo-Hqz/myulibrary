@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/app";
+import reducers from "./reducers";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
+function main() {
+  ReactDOM.render(
+    <Provider store={createStoreWithMiddleware(reducers)}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>,
+    document.querySelector(".app-wrapper")
   );
 }
 
-export default App;
+document.addEventListener("DOMContentLoaded", main);
