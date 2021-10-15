@@ -31,7 +31,7 @@ export default class Registration extends Component {
 
         axios
             .post(
-                "http://localhost:3000/users",
+                "https://apimyulibrary.herokuapp.com/api/v1/users",
                 {
                     user: {
                         first_name: first_name,

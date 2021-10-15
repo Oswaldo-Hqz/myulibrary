@@ -19,7 +19,7 @@ export default class App extends Component {
 
     checkLoginStatus() {
         axios
-            .get("http://localhost:3000/auto_login", { withCredentials: true })
+            .get("https://apimyulibrary.herokuapp.com/api/v1/auto_login", { withCredentials: true })
             .then(response => {
                 if (
                     response.data.logged_in &&
