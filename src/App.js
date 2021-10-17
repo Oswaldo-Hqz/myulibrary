@@ -41,9 +41,9 @@ function App() {
         {/* <Navigation/> */}
         <Route exact component={Navigation} />
 
-        <Switch>
+        {/* <Switch>
           
-        </Switch>
+        </Switch> */}
 
         <div className="container p-4">
           <Route exact path="/" component={Home} />
