@@ -4,20 +4,6 @@ import { Link } from "react-router-dom";
 
 export default class Home extends Component {
     
-    state = {
-        books: []
-    }
-
-    async getBookList(){
-        const res = await axios.get('https://apimyulibrary.herokuapp.com/api/v1/books');
-        console.log(res);
-        this.setState({books: res.data});
-    }
-    
-    async componentDidMount(){
-        this.getBookList();
-    }
-
     render() {
         return (
             <div>
@@ -36,19 +22,6 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="row row-cols-1 row-cols-md-3 g-4">
-                    {
-                        <div className="col">
-                            <div className="card h-100">
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                    <p className="card-text">This is a short card.</p>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                </div> */}
             </div>
         )
     }
