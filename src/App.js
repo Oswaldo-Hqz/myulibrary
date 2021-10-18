@@ -9,7 +9,7 @@ import store from "./store";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from './components/Navigation';
-import Home from './components/home'
+import Landing from './components/Landing'
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import PrivateRoute from "./components/private-route/PrivateRoute";
@@ -46,7 +46,7 @@ function App() {
         </Switch> */}
 
         <div className="container p-4">
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Landing} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           

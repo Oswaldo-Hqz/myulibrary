@@ -72,13 +72,6 @@ class Register extends Component {
         return (
         
             <div className="container h-100 ">
-                {/* <div className="row h-100 justify-content-center align-items-center">
-                    <div className="col-md-6">
-                        <Link to="/" className="btn btn-light">
-                            <i className="fas fa-arrow-left"></i> Home
-                        </Link>
-                    </div>
-                </div> */}
                 <div className="row mt-2 h-100 justify-content-center align-items-center">
                     <div className="col-md-6">
                         <div className="card shadow p-3 mb-5 bg-white rounded">
