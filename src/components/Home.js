@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-export default class Landing extends Component {
+export default class Home extends Component {
     
     state = {
         books: []
